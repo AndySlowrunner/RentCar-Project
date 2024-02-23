@@ -1,12 +1,12 @@
 import Header from "components/Heder/Heder";
-import Main from "components/Main/Main";
+import Body from "components/Body/Body";
 
 const HomePage = () => {
     return (
-        <div>
-            <Header />
-            <Main />
-        </div>
+      <div>
+        <Header />
+        <Body />
+      </div>
     );
 };
 
