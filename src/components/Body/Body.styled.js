@@ -103,7 +103,7 @@ export const List = styled.ul`
 
 export const Footer = styled.footer`
     margin-top: 48px;
-    background: gray;
+    background: #E0E0E0;
     height: 150px;
     width: calc(100% + 160px);
     margin-left: -80px;

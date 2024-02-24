@@ -93,8 +93,8 @@ const Main = () => {
       <Footer>
         <FooterNav>
           <FooterLink to="/">Home</FooterLink>
-          <FooterLink to="/cataloge">Cataloge</FooterLink>
-          <FooterLink to="/favorite">Favorite</FooterLink>
+          <FooterLink to="/catalog">Catalog</FooterLink>
+          <FooterLink to="/favorites">Favorites</FooterLink>
         </FooterNav>
         <FooterText>
           <p> 2024 All rights reserved. Created by Andy Slowrunner</p>
