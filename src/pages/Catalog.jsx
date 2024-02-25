@@ -1,9 +1,12 @@
+import FilterForm from "components/FilterForm/FilterForm";
 import ItemsList from "components/ItemsList/ItemsList";
-
 
 const Catalog = () => {
   return (
-    <ItemsList/>
+    <div>
+      <FilterForm/>
+      <ItemsList/>
+    </div>
   );
 };
 

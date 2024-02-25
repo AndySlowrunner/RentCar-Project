@@ -86,7 +86,6 @@ export const Button = styled.button`
     line-height: 143%;
 
     &:hover{
-        /* width: 274px; */
         background-color: #0B44CD;
         border-radius: 8px;
         color: #fff;
