@@ -17,17 +17,17 @@ const carsInitialState = {
 };
 
 const carsSlice = createSlice({
-  name: 'cars',
+  name: 'adverts',
   initialState: carsInitialState,
-  extraReducers: {
-    [fetchCars.pending]: handlePending,
-    [fetchCars.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.items = action.payload;
-    },
-    [fetchCars.rejected]: handleRejected,
-    
+  extraReducers: builder => {
+    builder
+      .addCase(fetchCars.pending, handlePending)
+      .addCase(fetchCars.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = action.payload;
+      })
+      .addCase(fetchCars.rejected, handleRejected);
   },
 });
 

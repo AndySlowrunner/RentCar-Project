@@ -1,9 +1,10 @@
-import { Body, Container, Content, Features, Footer, FooterLink, FooterNav, FooterText, Hero, Item, ItemText, List, Section, SectionContent, SectionImage, SectionTitle, Text, Title } from './Body.styled';
+import { StyledMain, Container, Content, Features, Hero, Item, ItemText, List, Section, SectionContent, SectionImage, SectionTitle, Text, Title } from './Main.styled';
 import image from '../../imeges/image1.png';
+import { Footer, FooterLink, FooterNav, FooterText } from 'components/Footer/Footer.styled';
 
 const Main = () => {
   return (
-    <Body>
+    <StyledMain>
       <Hero>
         <Container>
           <Content>
@@ -100,7 +101,7 @@ const Main = () => {
           <p> 2024 All rights reserved. Created by Andy Slowrunner</p>
         </FooterText>
       </Footer>
-    </Body>
+    </StyledMain>
   );
 };
 

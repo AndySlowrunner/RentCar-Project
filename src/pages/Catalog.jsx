@@ -1,9 +1,10 @@
+import ItemsList from "components/ItemsList/ItemsList";
+
+
 const Catalog = () => {
-    return (
-      <ul>
-        <li>Car #1</li>
-      </ul>
-    );
-}
+  return (
+    <ItemsList/>
+  );
+};
 
 export default Catalog;

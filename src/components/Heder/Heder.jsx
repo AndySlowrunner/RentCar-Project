@@ -1,9 +1,8 @@
-
 import sprite from "../../imeges/sprite.svg";
 import { Container, Link, Logo, LogoText, Nav } from "./Heder.styled";
 
 const Header = () => {
-    return (
+  return (
       <Container>
         <Logo>
           <svg width={100} height={90}>
@@ -17,7 +16,7 @@ const Header = () => {
           <Link to="/favorites">Favorites</Link>
         </Nav>
       </Container>
-    );
+  );
 }
 
 export default Header;

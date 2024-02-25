@@ -1,13 +1,9 @@
-import Header from "components/Heder/Heder";
-import Body from "components/Body/Body";
+import Main from "components/Main/Main";
 
 const HomePage = () => {
-    return (
-      <div>
-        <Header />
-        <Body />
-      </div>
-    );
+  return (
+    <Main />
+  );
 };
 
 export default HomePage;

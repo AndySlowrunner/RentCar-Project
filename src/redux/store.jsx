@@ -6,7 +6,7 @@ import { carsReducer } from "./slice";
 
 export const store = configureStore({
   reducer: {
-    cars: carsReducer,
+    adverts: carsReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
