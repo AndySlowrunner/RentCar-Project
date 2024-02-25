@@ -4,11 +4,10 @@ This project is a car rental website where users can browse, search, and reserve
 
 Technologies used:
 
-JavaScript
-React
-Redux
-Axios
-Features:
+JavaScript,
+React,
+Redux,
+Axios.
 
 Browse and search cars by brand, model, year, and location.
 View detailed information about each car, including rental price, rental company, type, mileage, and available accessories.
