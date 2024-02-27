@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.ul`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,7 +10,7 @@ export const Container = styled.div`
     gap: 29px;
 `;
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.li`
     position: relative;
     width: 274px;
     height: 426px;

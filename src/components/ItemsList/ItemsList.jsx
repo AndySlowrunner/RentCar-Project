@@ -33,13 +33,11 @@ const ItemList = () => {
                 height={18}
                 onClick={() => onHandleClick(id)}
               >
-                <svg>
                   <use
                     href={`${sprite}#${
                       activeItem === id ? 'active' : 'normal'
                     }`}
                   ></use>
-                </svg>
               </StyledSvg>
               <CardImage src={img} alt="car" />
               <Title>

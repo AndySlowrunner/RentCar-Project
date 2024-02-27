@@ -3,7 +3,7 @@ import { Container } from "./Pages.styled";
 const Favorites = () => {
     return (
       <Container>
-        <h2>Hear will be pleaced your favorite cars</h2>
+        <h2>Your favorite cars will be placed here</h2>
       </Container>
     );
 };

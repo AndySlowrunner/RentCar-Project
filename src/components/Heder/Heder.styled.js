@@ -38,5 +38,8 @@ export const Link = styled(NavLink)`
 
     &:hover {
         color: #0B44CD;
+    };
+    &.active{
+        text-decoration: underline;
     }
 `
