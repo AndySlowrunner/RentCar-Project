@@ -3,14 +3,24 @@ import { getCars } from "../../redux/selectors";
 import { Button, CardButton, CardImage, CardText, CardWrapper, Container, StyledSvg, Text, Title } from "./ItemsList.styled";
 import sprite from "../../imeges/sprite.svg";
 import { useState } from "react";
+import ModalCard from "components/Modal/Modal";
 
 const ItemList = () => {
     const items = useSelector(getCars);
-    const [activeItem, setActiveItem] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
+  const [modalIsOpen, setIsOpen] = useState(false);
 
     const onHandleClick = (id) => {
         setActiveItem(id === activeItem ? null : id);
-    };
+  };
+  
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  }
 
     return (
       <Container>
@@ -33,11 +43,9 @@ const ItemList = () => {
                 height={18}
                 onClick={() => onHandleClick(id)}
               >
-                  <use
-                    href={`${sprite}#${
-                      activeItem === id ? 'active' : 'normal'
-                    }`}
-                  ></use>
+                <use
+                  href={`${sprite}#${activeItem === id ? 'active' : 'normal'}`}
+                ></use>
               </StyledSvg>
               <CardImage src={img} alt="car" />
               <Title>
@@ -45,13 +53,14 @@ const ItemList = () => {
                 <CardText>{rentalPrice}</CardText>
               </Title>
               <Text>{`Kiev | Ukraine | ${rentalCompany} | ${type} | ${make} | ${mileage} | ${accessories[0]}`}</Text>
-              <CardButton type="button">Learn more</CardButton>
+              <CardButton type="button" onClick={openModal}>
+                Learn more
+              </CardButton>
             </CardWrapper>
           )
         )}
-        <Button type="button">
-          Load more
-        </Button>
+        <ModalCard isOpen={modalIsOpen} closeModal={closeModal}></ModalCard>
+        <Button type="button">Load more</Button>
       </Container>
     );
 

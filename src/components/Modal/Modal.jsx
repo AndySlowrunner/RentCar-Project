@@ -1,10 +1,11 @@
 import Modal from "react-modal";
+import { StyledModal } from "./Modal.styled";
 
 Modal.setAppElement('#root');
 
 const ModalCard = ({ isOpen, closeModal }) => {
   return (
-    <Modal
+    <StyledModal
       isOpen={isOpen}
       onRequestClose={closeModal}
       contentLabel="Modal for Board"
@@ -19,7 +20,7 @@ const ModalCard = ({ isOpen, closeModal }) => {
         <button>inside</button>
         <button>the modal</button>
       </form>
-    </Modal>
+    </StyledModal>
   );
 };
 
