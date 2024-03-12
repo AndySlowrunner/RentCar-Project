@@ -14,4 +14,7 @@
 <symbol id="chevron-down" width="20" height="20" viewBox="0 0 20 20" fill="none">
 <path d="M5 7.5L10 12.5L15 7.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
+<symbol id="close" width="24" height="24" fill="none">
+<path d="M18 6 6 18M6 6l12 12" stroke="#121417" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
 </svg>

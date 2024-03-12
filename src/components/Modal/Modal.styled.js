@@ -16,3 +16,7 @@ export const StyledModal = styled(Modal)`
     padding: 0%;
     /* z-index: 1000; */
 `;
+
+export const Container = styled.div`
+    padding: 40px;
+`;
