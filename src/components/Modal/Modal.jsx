@@ -1,5 +1,5 @@
 import Modal from "react-modal";
-import { Container, StyledModal } from "./Modal.styled";
+import { Container, StyledModal, StyledSvg } from "./Modal.styled";
 import sprite from "../../imeges/sprite.svg";
 
 Modal.setAppElement('#root');
@@ -12,9 +12,9 @@ const ModalCard = ({ isOpen, closeModal }) => {
       contentLabel="Modal for Board"
     >
       <Container>
-        <svg onClick={closeModal}>
+        <StyledSvg onClick={closeModal} width="24" height="24">
           <use href={`${sprite}#close`}></use>
-        </svg>
+        </StyledSvg>
         <div>I am a modal</div>
         <form>
           <input />

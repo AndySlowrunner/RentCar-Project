@@ -14,9 +14,15 @@ export const StyledModal = styled(Modal)`
     margin-right: -50%;
     transform: translate(-50%, -50%);
     padding: 0%;
-    /* z-index: 1000; */
 `;
 
 export const Container = styled.div`
     padding: 40px;
+`;
+
+export const StyledSvg = styled.svg`
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
 `;

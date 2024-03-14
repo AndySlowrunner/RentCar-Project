@@ -6,12 +6,12 @@ import { useState } from "react";
 import ModalCard from "components/Modal/Modal";
 
 const ItemList = () => {
-    const items = useSelector(getCars);
+  const items = useSelector(getCars);
   const [activeItem, setActiveItem] = useState(null);
   const [modalIsOpen, setIsOpen] = useState(false);
 
-    const onHandleClick = (id) => {
-        setActiveItem(id === activeItem ? null : id);
+  const onHandleClick = (id) => {
+    setActiveItem(id === activeItem ? null : id);
   };
   
   const openModal = () => {
