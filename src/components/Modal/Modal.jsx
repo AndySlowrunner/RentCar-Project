@@ -4,7 +4,7 @@ import sprite from "../../imeges/sprite.svg";
 
 Modal.setAppElement('#root');
 
-const ModalCard = ({ isOpen, closeModal }) => {
+const ModalCard = ({ isOpen, closeModal, selectedItem }) => {
   return (
     <StyledModal
       isOpen={isOpen}
@@ -15,14 +15,12 @@ const ModalCard = ({ isOpen, closeModal }) => {
         <StyledSvg onClick={closeModal} width="24" height="24">
           <use href={`${sprite}#close`}></use>
         </StyledSvg>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
+        {selectedItem && (
+          <div>
+            <img src={selectedItem.img} alt="Car" />
+            <p>{selectedItem.rentalCompany}</p>
+          </div>
+        )}
       </Container>
     </StyledModal>
   );
