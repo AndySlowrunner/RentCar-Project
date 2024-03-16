@@ -19,14 +19,14 @@ const ItemList = () => {
     setSelectedItem(item);
     setIsOpen(true);
   };
-
+    
   const closeModal = () => {
     setIsOpen(false);
   }
 
     return (
       <Container>
-        {items.map((item) => (
+        {items.map(item => (
           <CardWrapper key={item.id}>
             <StyledSvg
               width={18}
@@ -45,7 +45,7 @@ const ItemList = () => {
               <CardText>{item.rentalPrice}</CardText>
             </Title>
             <Text>{`Kiev | Ukraine | ${item.rentalCompany} | ${item.type} | ${item.make} | ${item.mileage} | ${item.accessories[0]}`}</Text>
-            <CardButton type="button" onClick={openModal}>
+            <CardButton type="button" onClick={()=>openModal(item)}>
               Learn more
             </CardButton>
           </CardWrapper>

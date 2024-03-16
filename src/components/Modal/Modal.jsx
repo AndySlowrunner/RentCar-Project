@@ -1,10 +1,11 @@
 import Modal from "react-modal";
-import { Container, StyledModal, StyledSvg } from "./Modal.styled";
+import { Container, StyledImage, StyledModal, StyledSvg } from "./Modal.styled";
 import sprite from "../../imeges/sprite.svg";
 
 Modal.setAppElement('#root');
 
 const ModalCard = ({ isOpen, closeModal, selectedItem }) => {
+  
   return (
     <StyledModal
       isOpen={isOpen}
@@ -17,8 +18,8 @@ const ModalCard = ({ isOpen, closeModal, selectedItem }) => {
         </StyledSvg>
         {selectedItem && (
           <div>
-            <img src={selectedItem.img} alt="Car" />
-            <p>{selectedItem.rentalCompany}</p>
+            <StyledImage src={selectedItem.img} alt="Car" />
+            <p>{selectedItem.description}</p>
           </div>
         )}
       </Container>

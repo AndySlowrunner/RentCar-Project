@@ -26,3 +26,10 @@ export const StyledSvg = styled.svg`
     right: 16px;
     cursor: pointer;
 `;
+
+export const StyledImage = styled.img`
+    border-radius: 14px;
+    width: 461px;
+    height: 248px;
+    object-fit: cover;
+`
