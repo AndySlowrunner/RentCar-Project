@@ -1,11 +1,11 @@
 import Modal from "react-modal";
-import { CardText, Container, StyledImage, StyledModal, StyledSvg, Text, Title } from "./Modal.styled";
+import { Accessories, CardText, Condition, ConditionContainer, Container, Description, Features, ModalButton, StyledImage, StyledModal, StyledSvg, Text, Title } from "./Modal.styled";
 import sprite from "../../imeges/sprite.svg";
 
 Modal.setAppElement('#root');
 
 const ModalCard = ({ isOpen, closeModal, selectedItem }) => {
-  
+    
   return (
     <StyledModal
       isOpen={isOpen}
@@ -28,9 +28,22 @@ const ModalCard = ({ isOpen, closeModal, selectedItem }) => {
               <CardText>{`${selectedItem.make} ${selectedItem.model}, ${selectedItem.year}`}</CardText>
               <Text>{`Kiev | Ukraine | Id: ${selectedItem.id} | Year: ${selectedItem.year} | Type: ${selectedItem.type} | Fuel Consumption: ${selectedItem.fuelConsumption} | Engine Size: ${selectedItem.engineSize}`}</Text>
             </Title>
-            <p>{selectedItem.description}</p>
-            <p>Accessories and functionalities:</p>
-            <Text>{selectedItem.accessories }</Text>
+            <Description>{selectedItem.description}</Description>
+            <Features>
+              <Accessories>Accessories and functionalities:</Accessories>
+              <Text>{selectedItem.accessories.join(' | ')}</Text>
+            </Features>
+            <Accessories>Rental Conditions:</Accessories>
+            <ConditionContainer>
+              {selectedItem.rentalConditions.split('\n').map(acces => {
+                return <Condition>{acces}</Condition>;
+              })}
+              <Condition>{`Mileage: ${selectedItem.mileage}`}</Condition>
+              <Condition>{`Price: ${selectedItem.rentalPrice}`}</Condition>
+            </ConditionContainer>
+            <ModalButton>
+              <a href="tel:+380730000000">Rental car</a>
+            </ModalButton>
           </div>
         )}
       </Container>
