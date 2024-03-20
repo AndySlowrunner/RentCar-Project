@@ -15,31 +15,32 @@ const FilterForm = () => {
       <Formik
         initialValues={{
           carBrand: '',
+          price: '',
         }}
         validationSchema={schema}
       >
         <StyledForm>
           <FormBlock>
             <label>Car brand</label>
-            <StyledField as="select" placeholder="carBrand">
+            <StyledField as="select" name="carBrand">
               {makes.map(make => (
                 <option value="Enter the text">{make}</option>
               ))}
             </StyledField>
           </FormBlock>
           <FormBlock>
-            <label>Price/1 hour</label>
-            <StyledField as="select" name="price">
-              <option value="To $">10</option>
-              <option value="To $">20</option>
-              <option value="To $">30</option>
-              <option value="To $">40</option>
-              <option value="To $">50</option>
-              <option value="To $">60</option>
-              <option value="To $">70</option>
-              <option value="To $">80</option>
-              <option value="To $">90</option>
-              <option value="To $">100</option>
+            <label htmlFor="price">Price/1 hour</label>
+            <StyledField as="select" name="price" id="price" placeholder="To $">
+              <option value="">10</option>
+              <option value="">20</option>
+              <option value="">30</option>
+              <option value="">40</option>
+              <option value="">50</option>
+              <option value="">60</option>
+              <option value="">70</option>
+              <option value="">80</option>
+              <option value="">90</option>
+              <option value="">100</option>
             </StyledField>
           </FormBlock>
           <FormBlock>
