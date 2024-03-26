@@ -1,13 +1,15 @@
 import { Formik } from "formik";
 import makes from '../../makes.json';
 import * as yup from 'yup';
-import { FilterButton, FormBlock, MileageForm, StyledField, StyledForm } from "./FilterForm.styled";
+import { BrandForm, FilterButton, MileageFilds, MileageForm, PriceForm, StyledField, StyledForm } from "./FilterForm.styled";
 
 const schema = yup.object().shape({
   carBrand: yup
     .string()
     .required(),
 });
+
+const options = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 150, 160, 170, 180, 190, 200];
 
 const FilterForm = () => {
 
@@ -20,36 +22,31 @@ const FilterForm = () => {
         validationSchema={schema}
       >
         <StyledForm>
-          <FormBlock>
+          <BrandForm>
             <label>Car brand</label>
             <StyledField as="select" name="carBrand">
               {makes.map(make => (
                 <option value="Enter the text">{make}</option>
               ))}
             </StyledField>
-          </FormBlock>
-          <FormBlock>
+          </BrandForm>
+          <PriceForm>
             <label htmlFor="price">Price/1 hour</label>
-            <StyledField as="select" name="price" id="price" placeholder="To $">
-              <option value="">10</option>
-              <option value="">20</option>
-              <option value="">30</option>
-              <option value="">40</option>
-              <option value="">50</option>
-              <option value="">60</option>
-              <option value="">70</option>
-              <option value="">80</option>
-              <option value="">90</option>
-              <option value="">100</option>
+            <StyledField as="select" name="price" id="price">
+              {options.map(option => (
+                <option key={option.index} value={option}>
+                  {option}
+                </option>
+              ))}
             </StyledField>
-          </FormBlock>
-          <FormBlock>
+          </PriceForm>
+          <MileageForm>
             <label>Car mileage/km</label>
-            <MileageForm>
-              <StyledField type="text" name="name" />
-              <StyledField type="text" name="name" />
-            </MileageForm>
-          </FormBlock>
+            <MileageFilds>
+              <StyledField type="textarea" name="name" />
+              <StyledField type="textarea" name="name" />
+            </MileageFilds>
+          </MileageForm>
           <FilterButton>Search</FilterButton>
         </StyledForm>
       </Formik>
