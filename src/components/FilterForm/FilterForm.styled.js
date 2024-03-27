@@ -41,8 +41,9 @@ export const MileageForm = styled.div`
     color: #8a8a89;
 `;
 
-export const MileageFilds = styled.div`
-    display: inline-block;
+export const MileageDiv = styled.div`
+    display: flex;
+    flex-wrap: nowrap;
 `;
 
 export const StyledField = styled(Field)`
@@ -61,6 +62,31 @@ export const PriceField = styled(Field)`
     padding: 14px 89px 14px 18px;
     width: 125px;
     height: 48px;
+    background: #f7f7fb;
+`;
+
+export const MileageLeft = styled(Field)`
+    border-right: 1px solid rgba(138, 138, 137, 0.2);
+    border-radius: 14px 0 0 14px;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 0;
+    width: 160px;
+    height: 48px;
+    margin-top: 8px;
+    padding: 14px 89px 14px 18px;
+    
+    background: #f7f7fb;
+`;
+
+export const MileageRight = styled(Field)`
+    border-radius: 0 14px 14px 0;
+    border: 0;
+    width: 160px;
+    height: 48px;
+    margin-top: 8px;
+    padding: 14px 89px 14px 18px;
+    
     background: #f7f7fb;
 `;
 
