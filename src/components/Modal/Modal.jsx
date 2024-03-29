@@ -26,7 +26,7 @@ const ModalCard = ({ isOpen, closeModal, selectedItem }) => {
             <StyledImage src={selectedItem.img} alt="Car" />
             <Title>
               <CardText>{`${selectedItem.make} ${selectedItem.model}, ${selectedItem.year}`}</CardText>
-              <Text>{`Kiev | Ukraine | Id: ${selectedItem.id} | Year: ${selectedItem.year} | Type: ${selectedItem.type} | Fuel Consumption: ${selectedItem.fuelConsumption} | Engine Size: ${selectedItem.engineSize}`}</Text>
+              <Text>{`${selectedItem.address.split(",")[1]} | Ukraine | Id: ${selectedItem.id} | Year: ${selectedItem.year} | Type: ${selectedItem.type} | Fuel Consumption: ${selectedItem.fuelConsumption} | Engine Size: ${selectedItem.engineSize}`}</Text>
             </Title>
             <Description>{selectedItem.description}</Description>
             <Features>

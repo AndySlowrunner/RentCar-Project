@@ -50,20 +50,20 @@ export const StyledField = styled(Field)`
     border-radius: 14px;
     border: 0;
     margin-top: 8px;
-    padding: 14px 89px 14px 18px;
+    padding: 14px 14px 14px 18px;
     height: 48px;
     background: #f7f7fb;
 `;
 
-export const PriceField = styled(Field)`
-    border-radius: 14px;
-    border: 0;
-    margin-top: 8px;
-    padding: 14px 89px 14px 18px;
-    width: 125px;
-    height: 48px;
-    background: #f7f7fb;
-`;
+// export const PriceField = styled(Field)`
+//     border-radius: 14px;
+//     border: 0;
+//     margin-top: 8px;
+//     padding: 14px 89px 14px 18px;
+//     width: 125px;
+//     height: 48px;
+//     background: #f7f7fb;
+// `;
 
 export const MileageLeft = styled(Field)`
     border-right: 1px solid rgba(138, 138, 137, 0.2);
@@ -74,7 +74,7 @@ export const MileageLeft = styled(Field)`
     width: 160px;
     height: 48px;
     margin-top: 8px;
-    padding: 14px 89px 14px 18px;
+    padding: 14px 14px 14px 18px;
     
     background: #f7f7fb;
 `;
@@ -85,7 +85,7 @@ export const MileageRight = styled(Field)`
     width: 160px;
     height: 48px;
     margin-top: 8px;
-    padding: 14px 89px 14px 18px;
+    padding: 14px 14px 14px 18px;
     
     background: #f7f7fb;
 `;

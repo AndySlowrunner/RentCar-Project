@@ -44,8 +44,8 @@ const ItemList = () => {
               <CardText>{`${item.make} ${item.model}, ${item.year}`}</CardText>
               <CardText>{item.rentalPrice}</CardText>
             </Title>
-            <Text>{`Kiev | Ukraine | ${item.rentalCompany} | ${item.type} | ${item.make} | ${item.mileage} | ${item.accessories[0]}`}</Text>
-            <CardButton type="button" onClick={()=>openModal(item)}>
+            <Text>{`${item.address.split(",")[1]} | Ukraine | ${item.rentalCompany} | ${item.type} | ${item.make} | ${item.mileage} | ${item.accessories[0]}`}</Text>
+            <CardButton type="button" onClick={() => openModal(item)}>
               Learn more
             </CardButton>
           </CardWrapper>
