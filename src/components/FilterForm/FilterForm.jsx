@@ -1,4 +1,4 @@
-import { Formik } from "formik";
+import { ErrorMessage, Formik } from "formik";
 import makes from '../../makes.json';
 import * as yup from 'yup';
 import { BrandForm, FilterButton, MileageDiv, MileageForm, MileageLeft, MileageRight, PriceForm, StyledField, StyledForm } from "./FilterForm.styled";
@@ -10,9 +10,14 @@ const schema = yup.object().shape({
   price: yup
     .string()
     .required(),
+  mileage: yup
+    .number()
+    .required()
 });
 
 const options = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 150, 160, 170, 180, 190, 200];
+
+const hundleSubmit = (value) => { console.log(value) };
 
 const FilterForm = () => {
 
@@ -20,9 +25,11 @@ const FilterForm = () => {
       <Formik
         initialValues={{
           carBrand: '',
-          price: 0,
+          price: '',
+          mileage: ''
         }}
         validationSchema={schema}
+        onSubmit={hundleSubmit}
       >
         <StyledForm>
           <BrandForm>
@@ -33,6 +40,7 @@ const FilterForm = () => {
                 <option value={make}>{make}</option>
               ))}
             </StyledField>
+            <ErrorMessage name="carBrand" />
           </BrandForm>
           <PriceForm>
             <label htmlFor="price">Price/1 hour</label>
@@ -41,6 +49,7 @@ const FilterForm = () => {
                 <option value={`To ${option}$`}>{option}</option>
               ))}
             </StyledField>
+            <ErrorMessage name="price" />
           </PriceForm>
           <MileageForm>
             <label>Car mileage/km</label>
@@ -48,8 +57,9 @@ const FilterForm = () => {
               <MileageLeft type="textarea" name="left" />
               <MileageRight type="textarea" name="right" />
             </MileageDiv>
+            <ErrorMessage name="mileage" />
           </MileageForm>
-          <FilterButton>Search</FilterButton>
+          <FilterButton type="submit">Search</FilterButton>
         </StyledForm>
       </Formik>
     );
