@@ -53,6 +53,12 @@ export const StyledField = styled(Field)`
     padding: 14px 14px 14px 18px;
     height: 48px;
     background: #f7f7fb;
+
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 111%;
+    color: #121417;
 `;
 
 // export const PriceField = styled(Field)`
