@@ -97,7 +97,8 @@ export const MileageRight = styled(Field)`
 `;
 
 export const FilterButton = styled.button`
-    align-self: flex-end;
+    /* align-self: flex-end; */
+    margin-top: 26px;
     border-radius: 12px;
     border: 0;
     padding: 14px 44px;
