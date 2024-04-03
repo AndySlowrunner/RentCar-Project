@@ -63,18 +63,3 @@ const ItemList = () => {
 };
 
 export default ItemList;
-
-
-
-// {
-//             id,
-//             img,
-//             make,
-//             model,
-//             year,
-//             rentalPrice,
-//             rentalCompany,
-//             type,
-//             mileage,
-//             accessories,
-//           }
